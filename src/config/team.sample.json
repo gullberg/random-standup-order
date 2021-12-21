@@ -1,0 +1,22 @@
+{
+  "developers": [
+    {
+      "name": "Devloper1",
+      "checked": true
+    },
+    {
+      "name": "Developer2",
+      "checked": false
+    }
+  ],
+  "others": [
+    {
+      "name": "Other1",
+      "checked": true
+    },
+    {
+      "name": "Other2",
+      "checked": false
+    }
+  ]
+}

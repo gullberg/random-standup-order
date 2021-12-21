@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Temporary OS files
+.DS_Store
+$RECYCLE.BIN/
+Thumbs.db
+*.lock
+*~
+
+src/config/team.json
