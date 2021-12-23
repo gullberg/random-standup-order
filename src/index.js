@@ -1,17 +1,10 @@
 'use strict';
 
 const inquirer = require('inquirer');
+const printAnswers = require('./print');
 const promptSetup = require('./setup');
-const shuffleArray = require('./shuffle');
-
-function printAnswers(answers) {
-  let numberOfKeys = Object.keys(answers).length;
-  for(const key in answers) {
-    console.log(shuffleArray(answers[key]));
-    --numberOfKeys && console.log('+');
-  }
-}
+const teamData = require("./config/team.json");
 
 inquirer
-  .prompt(promptSetup())
+  .prompt(promptSetup(teamData))
   .then(printAnswers);

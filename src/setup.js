@@ -1,8 +1,6 @@
 'use strict';
 
-const teamData = require("./config/team.json");
-
-module.exports = function promptSetup() {
+module.exports = function promptSetup(teamData) {
   const commonConfig = {
     type: 'checkbox',
     pageSize: 10,
