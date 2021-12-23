@@ -19,7 +19,6 @@ function promptSetup() {
         message: `Select ${key}`,
         name: key,
         choices: [
-          new inquirer.Separator(` = ${key} = `),
           ...teamData[key]
         ],
       }
