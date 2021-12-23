@@ -28,12 +28,14 @@ function promptSetup() {
   return promptQuestions;
 }
 
+function printAnswers(answers) {
+  let numberOfKeys = Object.keys(answers).length;
+  for(const key in answers) {
+    console.log(shuffleArray(answers[key]));
+    --numberOfKeys && console.log("+");
+  }
+}
+
 inquirer
   .prompt(promptSetup())
-  .then((answers) => {
-    let numberOfKeys = Object.keys(answers).length
-    for(const key in answers) {
-      console.log(shuffleArray(answers[key]));
-      --numberOfKeys && console.log("+");
-    }
-  });
+  .then(printAnswers);
