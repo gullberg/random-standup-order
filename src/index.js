@@ -12,28 +12,15 @@ const commonConfig = {
 let promptQuestions = [];
 
 function promptSetup() {
-  if(teamData.developers) {
+  for(const key in teamData) {
     promptQuestions = [...promptQuestions,
       {
         ...commonConfig,
-        message: 'Select developers',
-        name: 'developers',
+        message: `Select ${key}`,
+        name: key,
         choices: [
-          new inquirer.Separator(' = Developers = '),
-          ...teamData.developers
-        ],
-      }
-    ];
-  }
-  if(teamData.others) {
-    promptQuestions = [...promptQuestions,
-      {
-        ...commonConfig,
-        message: 'Select others',
-        name: 'others',
-        choices: [
-          new inquirer.Separator(' = Others = '),
-          ...teamData.others
+          new inquirer.Separator(` = ${key} = `),
+          ...teamData[key]
         ],
       }
     ];
