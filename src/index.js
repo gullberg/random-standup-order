@@ -2,7 +2,7 @@
 
 const inquirer = require('inquirer');
 const shuffleArray = require('./shuffle');
-let teamData = require("./config/team.json");
+const teamData = require("./config/team.json");
 
 const commonConfig = {
   type: 'checkbox',
@@ -31,7 +31,9 @@ function promptSetup() {
 inquirer
   .prompt(promptSetup())
   .then((answers) => {
+    let numberOfKeys = Object.keys(answers).length
     for(const key in answers) {
       console.log(shuffleArray(answers[key]));
+      --numberOfKeys && console.log("+");
     }
   });
