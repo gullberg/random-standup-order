@@ -1,7 +1,7 @@
 {
   "name": "randomStandupOrder",
   "version": "1.0.0",
-  "description": "",
+  "description": "A tool to randomize the order for a agile teams standup.",
   "main": "index.js",
   "scripts": {
     "random": "node src/index.js"

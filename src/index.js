@@ -18,9 +18,7 @@ function promptSetup() {
         ...commonConfig,
         message: `Select ${key}`,
         name: key,
-        choices: [
-          ...teamData[key]
-        ],
+        choices: teamData[key]
       }
     ];
   }
@@ -32,7 +30,7 @@ function printAnswers(answers) {
   let numberOfKeys = Object.keys(answers).length;
   for(const key in answers) {
     console.log(shuffleArray(answers[key]));
-    --numberOfKeys && console.log("+");
+    --numberOfKeys && console.log('+');
   }
 }
 
