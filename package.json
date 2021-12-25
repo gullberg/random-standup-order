@@ -4,12 +4,18 @@
   "description": "A tool to randomize the order for a agile teams standup.",
   "main": "index.js",
   "scripts": {
-    "random": "node src/index.js"
+    "random": "ts-node ./src/index.ts",
+    "build": "rm -rf ./dist && tsc && mkdir ./dist/config && cp ./src/config/team.json ./dist/config/team.json"
   },
   "keywords": [],
   "author": "Kristofer Gullberg",
   "license": "MIT",
   "dependencies": {
     "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.1.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
   }
 }
