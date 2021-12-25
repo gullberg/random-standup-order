@@ -1,8 +1,7 @@
-'use strict';
+import { shuffleArray } from './shuffle';
+import { Answers } from 'inquirer';
 
-const shuffleArray = require('./shuffle');
-
-module.exports = function printAnswers(answers) {
+export function printAnswers(answers: Answers) {
   let numberOfKeys = Object.keys(answers).length;
   for(const key in answers) {
     console.log(shuffleArray(answers[key]));

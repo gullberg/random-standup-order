@@ -1,12 +1,19 @@
-'use strict';
+interface Teams {
+  [key: string]: Array<TeamMember>
+}
 
-module.exports = function promptSetup(teamData) {
+interface TeamMember {
+  name: string,
+  checked?: boolean
+}
+
+export function promptSetup(teamData: Teams) {
   const commonConfig = {
     type: 'checkbox',
     pageSize: 10,
   };
 
-  let promptQuestions = [];
+  let promptQuestions: Array<Object> = [];
 
   for(const key in teamData) {
     promptQuestions = [...promptQuestions,
