@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "random": "ts-node ./src/index.ts",
-    "build": "rm -rf ./dist && tsc && mkdir ./dist/config && cp ./src/config/team.json ./dist/config/team.json"
+    "build": "rm -rf ./dist && tsc"
   },
   "keywords": [],
   "author": "Kristofer Gullberg",

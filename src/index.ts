@@ -1,4 +1,4 @@
-import * as inquirer from "inquirer";
+import inquirer from "inquirer";
 import { printAnswers } from './print';
 import { promptSetup } from './setup';
 import teamData from './config/team.json';
